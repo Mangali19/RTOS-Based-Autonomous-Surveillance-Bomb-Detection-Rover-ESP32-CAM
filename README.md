@@ -1,8 +1,9 @@
 # 🤖 RTOS-Based Autonomous Surveillance & Bomb Detection Rover — ESP32-CAM
 
 <p align="center">
-  <img src="image.png" alt="Trifuse Rover" width="600"/>
+  <img width="436" height="243" alt="image" src="https://github.com/user-attachments/assets/f73ce276-4996-4cd0-91f0-3d5e8f4f0c0e" />
 </p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-ESP32--CAM-blue?style=for-the-badge&logo=espressif"/>

